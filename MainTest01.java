@@ -230,5 +230,32 @@ public class MainTest01 {
 
 
 
+
+
+
+        LinkedList lList = new LinkedList();
+
+        System.out.println("\nLinkedList >> IsEmpty >> " + lList.isEmpty());
+        System.out.println("LinkedList >> Size    >> " + lList.size());
+
+        System.out.println("\nLinkedList >> Add '1'");
+        r = lList.add("1");
+        System.out.println("LinkedList >> Inspect Return Object >> HasError()     >> " + r.hasError());
+        System.out.println("LinkedList >> Inspect Return Object >> ErrorMessage() >> " + r.getError());
+        System.out.println("LinkedList >> Inspect Return Object >> Object()       >> " + r.getReturnValue());
+
+        System.out.println("\nLinkedList >> IsEmpty >> " + lList.isEmpty());
+        System.out.println("LinkedList >> Size    >> " + lList.size());
+
+        System.out.println("\nLinkedList >> Add '2'");
+        r = lList.add("2");
+        System.out.println("LinkedList >> Inspect Return Object >> HasError()     >> " + r.hasError());
+        System.out.println("LinkedList >> Inspect Return Object >> ErrorMessage() >> " + r.getError());
+        System.out.println("LinkedList >> Inspect Return Object >> Object()       >> " + r.getReturnValue());
+
+        System.out.println("\nLinkedList >> IsEmpty >> " + lList.isEmpty());
+        System.out.println("LinkedList >> Size    >> " + lList.size());
+
+
     }
 }

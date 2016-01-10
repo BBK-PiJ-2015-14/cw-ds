@@ -30,7 +30,10 @@ public class ArrayList implements List {
 
     @Override
     public ReturnObject get(int index) {
-        if (this.size() == 0 || index < 0 || index > this.size()-1) //if no entries, index less than 0, index greater than last element's index
+        if (this.size() == 0){
+            return new ReturnObjectImpl(true, ErrorMessage.EMPTY_STRUCTURE, null);
+        }
+        else if (index < 0 || index > this.size()-1) //if no entries, index less than 0, index greater than last element's index
         {
             //invalid path, index out of range
             return new ReturnObjectImpl(true, ErrorMessage.INDEX_OUT_OF_BOUNDS, null);
@@ -43,7 +46,10 @@ public class ArrayList implements List {
 
     @Override
     public ReturnObject remove(int index) {
-        if (this.size() == 0 || index < 0 || index > this.size()-1) //if no entries, index less than 0, index greater than last element's index
+        if (this.size() == 0){
+            return new ReturnObjectImpl(true, ErrorMessage.EMPTY_STRUCTURE, null);
+        }
+        else if (index < 0 || index > this.size()-1) //if no entries, index less than 0, index greater than last element's index
         {
             //invalid path, index out of range
             return new ReturnObjectImpl(true, ErrorMessage.INDEX_OUT_OF_BOUNDS, null);
@@ -78,7 +84,10 @@ public class ArrayList implements List {
             //invalid path
             return new ReturnObjectImpl(true, ErrorMessage.INVALID_ARGUMENT, null);
         }
-        else if (this.size() == 0 || index < 0 || index > this.size()-1){
+        else if (this.size() == 0){
+            return new ReturnObjectImpl(true, ErrorMessage.EMPTY_STRUCTURE, null);
+        }
+        else if (index < 0 || index > this.size()-1){
             //invalid path, index out of range
             return new ReturnObjectImpl(true, ErrorMessage.INDEX_OUT_OF_BOUNDS, null);
         }
