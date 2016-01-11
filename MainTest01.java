@@ -416,7 +416,7 @@ public class MainTest01 {
 
 
 
-
+**/
 
 
 
@@ -482,6 +482,9 @@ public class MainTest01 {
         System.out.println("SampleableListImpl >> Inspect Return Object >> ErrorMessage() >> " + r.getError());
         System.out.println("SampleableListImpl >> Inspect Return Object >> Object()       >> " + r.getReturnValue());
 
+/**
+
+
         System.out.println("\nSampleableListImpl >> Iterate:");
         for (int i = 0; i <= sli.size()-1; i++){
             System.out.println("SampleableListImpl >> List Elements >> " + sli.get(i).getReturnValue());
@@ -528,7 +531,7 @@ public class MainTest01 {
         System.out.println("StackImpl >> Size >> " + si.size());
 
 
-**/
+
 
 
         FunctionalLinkedList flList = new FunctionalLinkedList();
@@ -577,6 +580,43 @@ public class MainTest01 {
         System.out.println("FunctionalLinkedList >> Inspect Return Object >> Object()       >> " + r.getReturnValue());
 
 
+ **/
+
+
+        System.out.println("\nImprovedStackImpl");
+        ImprovedStackImpl si = new ImprovedStackImpl(sli);
+        System.out.println("ImprovedStackImpl >> IsEmpty >> " + si.isEmpty());
+        System.out.println("ImprovedStackImpl >> Size >> " + si.size());
+        si.push("666");
+        si.push("0000");
+        si.push("1111");
+
+        System.out.println("ImprovedStackImpl >> Size >> " + si.size());
+
+        System.out.println("\nImprovedStackImpl >> TOP");
+        r = si.top ();
+        System.out.println("ImprovedStackImpl >> Inspect Return Object >> HasError()     >> " + r.hasError());
+        System.out.println("ImprovedStackImpl >> Inspect Return Object >> ErrorMessage() >> " + r.getError());
+        System.out.println("ImprovedStackImpl >> Inspect Return Object >> Object()       >> " + r.getReturnValue());
+        System.out.println("ImprovedStackImpl >> Size >> " + si.size());
+
+        System.out.println("\nImprovedStackImpl >> POP");
+        r = si.pop ();
+        System.out.println("ImprovedStackImpl >> Inspect Return Object >> HasError()     >> " + r.hasError());
+        System.out.println("ImprovedStackImpl >> Inspect Return Object >> ErrorMessage() >> " + r.getError());
+        System.out.println("ImprovedStackImpl >> Inspect Return Object >> Object()       >> " + r.getReturnValue());
+        System.out.println("ImprovedStackImpl >> Size >> " + si.size());
+
+        System.out.println("\nImprovedStackImpl >> TOP");
+        r = si.top ();
+        System.out.println("ImprovedStackImpl >> Inspect Return Object >> HasError()     >> " + r.hasError());
+        System.out.println("ImprovedStackImpl >> Inspect Return Object >> ErrorMessage() >> " + r.getError());
+        System.out.println("ImprovedStackImpl >> Inspect Return Object >> Object()       >> " + r.getReturnValue());
+        System.out.println("ImprovedStackImpl >> Size >> " + si.size());
+
+        System.out.println("\nImprovedStackImpl >> Remove");
+        si.remove("666");
+        System.out.println("ImprovedStackImpl >> Size >> " + si.size());
 
 
 
