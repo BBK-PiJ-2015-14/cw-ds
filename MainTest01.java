@@ -6,7 +6,7 @@ public class MainTest01 {
     public static void main(String[] args){
         ReturnObject r = null;
 
-
+/**
         ArrayList arList = new ArrayList();
 
         System.out.println("\nArrayList >> Adding string '7' to list at Index '0'");
@@ -421,7 +421,7 @@ public class MainTest01 {
 
 
         SampleableListImpl sli = new SampleableListImpl();
-/**
+
         System.out.println("\nSampleableListImpl >> Adding string '000' to list");
         r = sli.add ("000");
         System.out.println("SampleableListImpl >> Inspect Return Object >> HasError()     >> " + r.hasError());
@@ -487,7 +487,7 @@ public class MainTest01 {
             System.out.println("SampleableListImpl >> List Elements >> " + sli.get(i).getReturnValue());
         }
 
-**/
+
         System.out.println("\nSampleableListImpl >> Sample()");
         SampleableList sliS = sli.sample();
 
@@ -526,6 +526,58 @@ public class MainTest01 {
         System.out.println("StackImpl >> Inspect Return Object >> ErrorMessage() >> " + r.getError());
         System.out.println("StackImpl >> Inspect Return Object >> Object()       >> " + r.getReturnValue());
         System.out.println("StackImpl >> Size >> " + si.size());
+
+
+**/
+
+
+        FunctionalLinkedList flList = new FunctionalLinkedList();
+
+        System.out.println("\nFunctionalLinkedList >> Get Head");
+        r = flList.head();
+        System.out.println("FunctionalLinkedList >> Inspect Return Object >> HasError()     >> " + r.hasError());
+        System.out.println("FunctionalLinkedList >> Inspect Return Object >> ErrorMessage() >> " + r.getError());
+        System.out.println("FunctionalLinkedList >> Inspect Return Object >> Object()       >> " + r.getReturnValue());
+
+        System.out.println("\nFunctionalLinkedList >> Adding string '000' to list");
+        r = flList.add ("000");
+        System.out.println("FunctionalLinkedList >> Inspect Return Object >> HasError()     >> " + r.hasError());
+        System.out.println("FunctionalLinkedList >> Inspect Return Object >> ErrorMessage() >> " + r.getError());
+        System.out.println("FunctionalLinkedList >> Inspect Return Object >> Object()       >> " + r.getReturnValue());
+
+        System.out.println("\nFunctionalLinkedList >> Adding string '111' to list");
+        r = flList.add ("111");
+        System.out.println("FunctionalLinkedList >> Inspect Return Object >> HasError()     >> " + r.hasError());
+        System.out.println("FunctionalLinkedList >> Inspect Return Object >> ErrorMessage() >> " + r.getError());
+        System.out.println("FunctionalLinkedList >> Inspect Return Object >> Object()       >> " + r.getReturnValue());
+
+        System.out.println("\nFunctionalLinkedList >> Adding string '222' to list");
+        r = flList.add ("222");
+        System.out.println("FunctionalLinkedList >> Inspect Return Object >> HasError()     >> " + r.hasError());
+        System.out.println("FunctionalLinkedList >> Inspect Return Object >> ErrorMessage() >> " + r.getError());
+        System.out.println("FunctionalLinkedList >> Inspect Return Object >> Object()       >> " + r.getReturnValue());
+
+        System.out.println("\nFunctionalLinkedList >> Iterate:");
+        for (int i = 0; i <= flList.size()-1; i++){
+            System.out.println("FunctionalLinkedList >> List Elements >> " + flList.get(i).getReturnValue());
+        }
+
+        System.out.println("\nFunctionalLinkedList >> FunctionalList()");
+        FunctionalList fl = flList.rest();
+
+        System.out.println("\nFunctionalLinkedList >> Iterate Rest():");
+        for (int i = 0; i <= fl.size()-1; i++){
+            System.out.println("FunctionalLinkedList >> List Elements >> " + fl.get(i).getReturnValue());
+        }
+
+        System.out.println("\nFunctionalLinkedList >> Get Head");
+        r = flList.head();
+        System.out.println("FunctionalLinkedList >> Inspect Return Object >> HasError()     >> " + r.hasError());
+        System.out.println("FunctionalLinkedList >> Inspect Return Object >> ErrorMessage() >> " + r.getError());
+        System.out.println("FunctionalLinkedList >> Inspect Return Object >> Object()       >> " + r.getReturnValue());
+
+
+
 
 
 
