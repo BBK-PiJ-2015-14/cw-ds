@@ -1,2 +1,3 @@
 # cw-ds
-Work In Progress. Not yet complete.
+Completed.
+Out of time for ImprovedStackImpl.reverse()
