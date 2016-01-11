@@ -2,6 +2,7 @@
  * Created by Peter Styk on 10/01/2016.
  * LinkedList List implementation with First and no Last
  * First Node is a placeholder and never holds a value.
+ * Methods indices are zero based analogous to ArrayList implementation.
  */
 public class LinkedList implements List {
     private Node first;
@@ -46,17 +47,85 @@ public class LinkedList implements List {
 
     @Override
     public ReturnObject get(int index) {
-        return null;
+        if (this.size() == 0){
+            return new ReturnObjectImpl(true, ErrorMessage.EMPTY_STRUCTURE, null);
+        }
+        else if (index < 0 || index > this.size()-1) //if no entries, index less than 0, index greater than last element's index
+        {
+            //invalid path, index out of range
+            return new ReturnObjectImpl(true, ErrorMessage.INDEX_OUT_OF_BOUNDS, null);
+        }
+        else {
+            //valid path, valid range
+            Node node = this.first;
+            for (int i = 0; i <= index; i++){
+                node = node.getNextNode();
+            }
+            return new ReturnObjectImpl(false, ErrorMessage.NO_ERROR, node.getObject());
+        }
     }
 
     @Override
     public ReturnObject remove(int index) {
-        return null;
+        if (this.size() == 0){
+            return new ReturnObjectImpl(true, ErrorMessage.EMPTY_STRUCTURE, null);
+        }
+        else if (index < 0 || index > this.size()-1) //if no entries, index less than 0, index greater than last element's index
+        {
+            //invalid path, index out of range
+            return new ReturnObjectImpl(true, ErrorMessage.INDEX_OUT_OF_BOUNDS, null);
+        }
+        else {
+            //valid path, valid range
+            //at this point we know there is at least one node
+            Node node = this.first;
+            for (int i = 0; i < index; i++){ //stop one before index (previous to current)
+                node = node.getNextNode();
+            }
+
+            //relink
+            Node removedNode = node.getNextNode();
+            if (removedNode.getNextNode() == null){
+                node.setNextNode(null);
+            }
+            else{
+                node.setNextNode(removedNode.getNextNode());
+            }
+
+            //decrease item counter
+            this.addedElementsCount--;
+
+            return new ReturnObjectImpl(false, ErrorMessage.NO_ERROR, removedNode.getObject());
+        }
     }
 
     @Override
     public ReturnObject add(int index, Object item) {
-        return null;
+        if (this.size() == 0){
+            return new ReturnObjectImpl(true, ErrorMessage.EMPTY_STRUCTURE, null);
+        }
+        else if (index < 0 || index > this.size()-1) //if no entries, index less than 0, index greater than last element's index
+        {
+            //invalid path, index out of range
+            return new ReturnObjectImpl(true, ErrorMessage.INDEX_OUT_OF_BOUNDS, null);
+        }
+        else {
+            //valid path, valid range
+            //at this point we know there is at least one node
+
+            Node node = this.first;
+            for (int i = 0; i < index; i++){ //stop one before index (previous to desired)
+                node = node.getNextNode();
+            }
+
+            //Relink
+            Node newNode = new Node (item);
+            newNode.setNextNode(node.getNextNode());
+            node.setNextNode(newNode);
+
+            this.addedElementsCount++;
+            return new ReturnObjectImpl(false, ErrorMessage.NO_ERROR, null);
+        }
     }
 
 
@@ -69,7 +138,7 @@ public class LinkedList implements List {
 
         //constructors
         public Node(Object o) {
-            nextNode = null; //end of the link
+            nextNode = null;
             this.o = o;
         }
 

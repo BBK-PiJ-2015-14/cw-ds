@@ -4,8 +4,10 @@
 public class MainTest01 {
 
     public static void main(String[] args){
-        ArrayList arList = new ArrayList();
         ReturnObject r = null;
+
+
+        ArrayList arList = new ArrayList();
 
         System.out.println("\nArrayList >> Adding string '7' to list at Index '0'");
         r = arList.add (0,"7");
@@ -232,11 +234,69 @@ public class MainTest01 {
 
 
 
+        
+
+
 
         LinkedList lList = new LinkedList();
 
         System.out.println("\nLinkedList >> IsEmpty >> " + lList.isEmpty());
         System.out.println("LinkedList >> Size    >> " + lList.size());
+
+        System.out.println("\nLinkedList >> Add '0'");
+        r = lList.add(new String("0"));
+        System.out.println("LinkedList >> Inspect Return Object >> HasError()     >> " + r.hasError());
+        System.out.println("LinkedList >> Inspect Return Object >> ErrorMessage() >> " + r.getError());
+        System.out.println("LinkedList >> Inspect Return Object >> Object()       >> " + r.getReturnValue());
+
+        System.out.println("\nLinkedList >> Add '1'");
+        r = lList.add("1");
+        System.out.println("LinkedList >> Inspect Return Object >> HasError()     >> " + r.hasError());
+        System.out.println("LinkedList >> Inspect Return Object >> ErrorMessage() >> " + r.getError());
+        System.out.println("LinkedList >> Inspect Return Object >> Object()       >> " + r.getReturnValue());
+
+        System.out.println("\nLinkedList >> Iterate:");
+        for (int i = 0; i <= lList.size()-1; i++){
+            System.out.println("LinkedList >> List Elements >> " + lList.get(i).getReturnValue());
+        }
+
+        System.out.println("\nLinkedList >> Add '55' at 1");
+        r = lList.add(1,"55");
+        System.out.println("LinkedList >> Inspect Return Object >> HasError()     >> " + r.hasError());
+        System.out.println("LinkedList >> Inspect Return Object >> ErrorMessage() >> " + r.getError());
+        System.out.println("LinkedList >> Inspect Return Object >> Object()       >> " + r.getReturnValue());
+
+        System.out.println("\nLinkedList >> Add '66' at 1");
+        r = lList.add(1,"66");
+        System.out.println("LinkedList >> Inspect Return Object >> HasError()     >> " + r.hasError());
+        System.out.println("LinkedList >> Inspect Return Object >> ErrorMessage() >> " + r.getError());
+        System.out.println("LinkedList >> Inspect Return Object >> Object()       >> " + r.getReturnValue());
+
+        System.out.println("\nLinkedList >> Iterate:");
+        for (int i = 0; i <= lList.size()-1; i++){
+            System.out.println("LinkedList >> List Elements >> " + lList.get(i).getReturnValue());
+        }
+
+        System.out.println("\nLinkedList >> Remove at index '2'");
+        r = lList.remove(2);
+        System.out.println("LinkedList >> Inspect Return Object >> HasError()     >> " + r.hasError());
+        System.out.println("LinkedList >> Inspect Return Object >> ErrorMessage() >> " + r.getError());
+        System.out.println("LinkedList >> Inspect Return Object >> Object()       >> " + r.getReturnValue());
+
+        System.out.println("\nLinkedList >> Iterate:");
+        for (int i = 0; i <= lList.size()-1; i++){
+            System.out.println("LinkedList >> List Elements >> " + lList.get(i).getReturnValue());
+        }
+
+
+
+
+
+        System.out.println("\nLinkedList >> Get at index '0'");
+        r = lList.get(0);
+        System.out.println("LinkedList >> Inspect Return Object >> HasError()     >> " + r.hasError());
+        System.out.println("LinkedList >> Inspect Return Object >> ErrorMessage() >> " + r.getError());
+        System.out.println("LinkedList >> Inspect Return Object >> Object()       >> " + r.getReturnValue());
 
         System.out.println("\nLinkedList >> Add '1'");
         r = lList.add("1");
@@ -255,6 +315,78 @@ public class MainTest01 {
 
         System.out.println("\nLinkedList >> IsEmpty >> " + lList.isEmpty());
         System.out.println("LinkedList >> Size    >> " + lList.size());
+
+
+
+        System.out.println("\nLinkedList >> Remove at index '1'");
+        r = lList.remove(1);
+        System.out.println("LinkedList >> Inspect Return Object >> HasError()     >> " + r.hasError());
+        System.out.println("LinkedList >> Inspect Return Object >> ErrorMessage() >> " + r.getError());
+        System.out.println("LinkedList >> Inspect Return Object >> Object()       >> " + r.getReturnValue());
+
+        System.out.println("\nLinkedList >> IsEmpty >> " + lList.isEmpty());
+        System.out.println("LinkedList >> Size    >> " + lList.size());
+
+
+        System.out.println("\nLinkedList >> Remove at index '1'");
+        r = lList.remove(1);
+        System.out.println("LinkedList >> Inspect Return Object >> HasError()     >> " + r.hasError());
+        System.out.println("LinkedList >> Inspect Return Object >> ErrorMessage() >> " + r.getError());
+        System.out.println("LinkedList >> Inspect Return Object >> Object()       >> " + r.getReturnValue());
+
+        System.out.println("\nLinkedList >> IsEmpty >> " + lList.isEmpty());
+        System.out.println("LinkedList >> Size    >> " + lList.size());
+
+        System.out.println("\nLinkedList >> Remove at index '0'");
+        r = lList.remove(0);
+        System.out.println("LinkedList >> Inspect Return Object >> HasError()     >> " + r.hasError());
+        System.out.println("LinkedList >> Inspect Return Object >> ErrorMessage() >> " + r.getError());
+        System.out.println("LinkedList >> Inspect Return Object >> Object()       >> " + r.getReturnValue());
+
+        System.out.println("\nLinkedList >> IsEmpty >> " + lList.isEmpty());
+        System.out.println("LinkedList >> Size    >> " + lList.size());
+
+        System.out.println("\nLinkedList >> Remove at index '0'");
+        r = lList.remove(0);
+        System.out.println("LinkedList >> Inspect Return Object >> HasError()     >> " + r.hasError());
+        System.out.println("LinkedList >> Inspect Return Object >> ErrorMessage() >> " + r.getError());
+        System.out.println("LinkedList >> Inspect Return Object >> Object()       >> " + r.getReturnValue());
+
+        System.out.println("\nLinkedList >> IsEmpty >> " + lList.isEmpty());
+        System.out.println("LinkedList >> Size    >> " + lList.size());
+
+
+
+        System.out.println("\nLinkedList >> Iterate:");
+        for (int i = 0; i <= lList.size()-1; i++){
+            System.out.println("LinkedList >> List Elements >> " + lList.get(i).getReturnValue());
+        }
+
+
+
+        System.out.println("\nLinkedList >> Get at index '1'");
+        r = lList.get(1);
+        System.out.println("LinkedList >> Inspect Return Object >> HasError()     >> " + r.hasError());
+        System.out.println("LinkedList >> Inspect Return Object >> ErrorMessage() >> " + r.getError());
+        System.out.println("LinkedList >> Inspect Return Object >> Object()       >> " + r.getReturnValue());
+
+        System.out.println("\nLinkedList >> Get at index '-1'");
+        r = lList.get(-1);
+        System.out.println("LinkedList >> Inspect Return Object >> HasError()     >> " + r.hasError());
+        System.out.println("LinkedList >> Inspect Return Object >> ErrorMessage() >> " + r.getError());
+        System.out.println("LinkedList >> Inspect Return Object >> Object()       >> " + r.getReturnValue());
+
+        System.out.println("\nLinkedList >> Get at index '2'");
+        r = lList.get(2);
+        System.out.println("LinkedList >> Inspect Return Object >> HasError()     >> " + r.hasError());
+        System.out.println("LinkedList >> Inspect Return Object >> ErrorMessage() >> " + r.getError());
+        System.out.println("LinkedList >> Inspect Return Object >> Object()       >> " + r.getReturnValue());
+
+        System.out.println("\nLinkedList >> Get at index '0'");
+        r = lList.get(0);
+        System.out.println("LinkedList >> Inspect Return Object >> HasError()     >> " + r.hasError());
+        System.out.println("LinkedList >> Inspect Return Object >> ErrorMessage() >> " + r.getError());
+        System.out.println("LinkedList >> Inspect Return Object >> Object()       >> " + r.getReturnValue());
 
 
     }
