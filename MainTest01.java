@@ -421,7 +421,7 @@ public class MainTest01 {
 
 
         SampleableListImpl sli = new SampleableListImpl();
-
+/**
         System.out.println("\nSampleableListImpl >> Adding string '000' to list");
         r = sli.add ("000");
         System.out.println("SampleableListImpl >> Inspect Return Object >> HasError()     >> " + r.hasError());
@@ -487,7 +487,7 @@ public class MainTest01 {
             System.out.println("SampleableListImpl >> List Elements >> " + sli.get(i).getReturnValue());
         }
 
-
+**/
         System.out.println("\nSampleableListImpl >> Sample()");
         SampleableList sliS = sli.sample();
 
@@ -496,6 +496,36 @@ public class MainTest01 {
             System.out.println("nSampleableListImpl.Sample() >> List Elements >> " + sliS.get(i).getReturnValue());
         }
 
+
+
+        System.out.println("\nStackImpl");
+        StackImpl si = new StackImpl(sli);
+        System.out.println("StackImpl >> IsEmpty >> " + si.isEmpty());
+        System.out.println("StackImpl >> Size >> " + si.size());
+        //si.push("0000");
+        //si.push("1111");
+        System.out.println("StackImpl >> Size >> " + si.size());
+
+        System.out.println("\nStackImpl >> TOP");
+        r = si.top ();
+        System.out.println("StackImpl >> Inspect Return Object >> HasError()     >> " + r.hasError());
+        System.out.println("StackImpl >> Inspect Return Object >> ErrorMessage() >> " + r.getError());
+        System.out.println("StackImpl >> Inspect Return Object >> Object()       >> " + r.getReturnValue());
+        System.out.println("StackImpl >> Size >> " + si.size());
+
+        System.out.println("\nStackImpl >> POP");
+        r = si.pop ();
+        System.out.println("StackImpl >> Inspect Return Object >> HasError()     >> " + r.hasError());
+        System.out.println("StackImpl >> Inspect Return Object >> ErrorMessage() >> " + r.getError());
+        System.out.println("StackImpl >> Inspect Return Object >> Object()       >> " + r.getReturnValue());
+        System.out.println("StackImpl >> Size >> " + si.size());
+
+        System.out.println("\nStackImpl >> TOP");
+        r = si.top ();
+        System.out.println("StackImpl >> Inspect Return Object >> HasError()     >> " + r.hasError());
+        System.out.println("StackImpl >> Inspect Return Object >> ErrorMessage() >> " + r.getError());
+        System.out.println("StackImpl >> Inspect Return Object >> Object()       >> " + r.getReturnValue());
+        System.out.println("StackImpl >> Size >> " + si.size());
 
 
 
