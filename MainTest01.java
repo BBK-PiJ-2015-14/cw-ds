@@ -234,7 +234,7 @@ public class MainTest01 {
 
 
 
-        
+
 
 
 
@@ -288,10 +288,6 @@ public class MainTest01 {
             System.out.println("LinkedList >> List Elements >> " + lList.get(i).getReturnValue());
         }
 
-
-
-
-
         System.out.println("\nLinkedList >> Get at index '0'");
         r = lList.get(0);
         System.out.println("LinkedList >> Inspect Return Object >> HasError()     >> " + r.hasError());
@@ -316,8 +312,6 @@ public class MainTest01 {
         System.out.println("\nLinkedList >> IsEmpty >> " + lList.isEmpty());
         System.out.println("LinkedList >> Size    >> " + lList.size());
 
-
-
         System.out.println("\nLinkedList >> Remove at index '1'");
         r = lList.remove(1);
         System.out.println("LinkedList >> Inspect Return Object >> HasError()     >> " + r.hasError());
@@ -326,7 +320,6 @@ public class MainTest01 {
 
         System.out.println("\nLinkedList >> IsEmpty >> " + lList.isEmpty());
         System.out.println("LinkedList >> Size    >> " + lList.size());
-
 
         System.out.println("\nLinkedList >> Remove at index '1'");
         r = lList.remove(1);
@@ -354,15 +347,11 @@ public class MainTest01 {
 
         System.out.println("\nLinkedList >> IsEmpty >> " + lList.isEmpty());
         System.out.println("LinkedList >> Size    >> " + lList.size());
-
-
 
         System.out.println("\nLinkedList >> Iterate:");
         for (int i = 0; i <= lList.size()-1; i++){
             System.out.println("LinkedList >> List Elements >> " + lList.get(i).getReturnValue());
         }
-
-
 
         System.out.println("\nLinkedList >> Get at index '1'");
         r = lList.get(1);
@@ -387,6 +376,46 @@ public class MainTest01 {
         System.out.println("LinkedList >> Inspect Return Object >> HasError()     >> " + r.hasError());
         System.out.println("LinkedList >> Inspect Return Object >> ErrorMessage() >> " + r.getError());
         System.out.println("LinkedList >> Inspect Return Object >> Object()       >> " + r.getReturnValue());
+
+
+
+
+        FunctionalArrayList faList = new FunctionalArrayList();
+
+        System.out.println("\nFunctionalArrayList >> Adding string '000' to list");
+        r = faList.add ("000");
+        System.out.println("ArrayList >> Inspect Return Object >> HasError()     >> " + r.hasError());
+        System.out.println("ArrayList >> Inspect Return Object >> ErrorMessage() >> " + r.getError());
+        System.out.println("ArrayList >> Inspect Return Object >> Object()       >> " + r.getReturnValue());
+
+        //System.out.println("\nFunctionalArrayList >> Adding string '111' to list");
+        //r = faList.add ("111");
+        //System.out.println("ArrayList >> Inspect Return Object >> HasError()     >> " + r.hasError());
+        //System.out.println("ArrayList >> Inspect Return Object >> ErrorMessage() >> " + r.getError());
+        //System.out.println("ArrayList >> Inspect Return Object >> Object()       >> " + r.getReturnValue());
+
+        //System.out.println("\nFunctionalArrayList >> Adding string '222' to list");
+        //r = faList.add ("222");
+        //System.out.println("ArrayList >> Inspect Return Object >> HasError()     >> " + r.hasError());
+        //System.out.println("ArrayList >> Inspect Return Object >> ErrorMessage() >> " + r.getError());
+        //System.out.println("ArrayList >> Inspect Return Object >> Object()       >> " + r.getReturnValue());
+
+        System.out.println("\nLinkedList >> Iterate:");
+        for (int i = 0; i <= faList.size()-1; i++){
+            System.out.println("LinkedList >> List Elements >> " + faList.get(i).getReturnValue());
+        }
+
+
+
+
+
+        System.out.println("\nFunctionalArrayList >> FunctionalList()");
+        FunctionalList fl = faList.rest();
+
+        System.out.println("\nFunctionalArrayList >> Iterate:");
+        for (int i = 0; i <= fl.size()-1; i++){
+            System.out.println("FunctionalArrayList >> List Elements >> " + fl.get(i).getReturnValue());
+        }
 
 
     }
