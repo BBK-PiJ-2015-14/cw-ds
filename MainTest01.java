@@ -384,30 +384,26 @@ public class MainTest01 {
 
         System.out.println("\nFunctionalArrayList >> Adding string '000' to list");
         r = faList.add ("000");
-        System.out.println("ArrayList >> Inspect Return Object >> HasError()     >> " + r.hasError());
-        System.out.println("ArrayList >> Inspect Return Object >> ErrorMessage() >> " + r.getError());
-        System.out.println("ArrayList >> Inspect Return Object >> Object()       >> " + r.getReturnValue());
+        System.out.println("FunctionalArrayList >> Inspect Return Object >> HasError()     >> " + r.hasError());
+        System.out.println("FunctionalArrayList >> Inspect Return Object >> ErrorMessage() >> " + r.getError());
+        System.out.println("FunctionalArrayList >> Inspect Return Object >> Object()       >> " + r.getReturnValue());
 
-        //System.out.println("\nFunctionalArrayList >> Adding string '111' to list");
-        //r = faList.add ("111");
-        //System.out.println("ArrayList >> Inspect Return Object >> HasError()     >> " + r.hasError());
-        //System.out.println("ArrayList >> Inspect Return Object >> ErrorMessage() >> " + r.getError());
-        //System.out.println("ArrayList >> Inspect Return Object >> Object()       >> " + r.getReturnValue());
+        System.out.println("\nFunctionalArrayList >> Adding string '111' to list");
+        r = faList.add ("111");
+        System.out.println("FunctionalArrayList >> Inspect Return Object >> HasError()     >> " + r.hasError());
+        System.out.println("FunctionalArrayList >> Inspect Return Object >> ErrorMessage() >> " + r.getError());
+        System.out.println("FunctionalArrayList >> Inspect Return Object >> Object()       >> " + r.getReturnValue());
 
-        //System.out.println("\nFunctionalArrayList >> Adding string '222' to list");
-        //r = faList.add ("222");
-        //System.out.println("ArrayList >> Inspect Return Object >> HasError()     >> " + r.hasError());
-        //System.out.println("ArrayList >> Inspect Return Object >> ErrorMessage() >> " + r.getError());
-        //System.out.println("ArrayList >> Inspect Return Object >> Object()       >> " + r.getReturnValue());
+        System.out.println("\nFunctionalArrayList >> Adding string '222' to list");
+        r = faList.add ("222");
+        System.out.println("FunctionalArrayList >> Inspect Return Object >> HasError()     >> " + r.hasError());
+        System.out.println("FunctionalArrayList >> Inspect Return Object >> ErrorMessage() >> " + r.getError());
+        System.out.println("FunctionalArrayList >> Inspect Return Object >> Object()       >> " + r.getReturnValue());
 
-        System.out.println("\nLinkedList >> Iterate:");
+        System.out.println("\nFunctionalArrayList >> Iterate:");
         for (int i = 0; i <= faList.size()-1; i++){
-            System.out.println("LinkedList >> List Elements >> " + faList.get(i).getReturnValue());
+            System.out.println("FunctionalArrayList >> List Elements >> " + faList.get(i).getReturnValue());
         }
-
-
-
-
 
         System.out.println("\nFunctionalArrayList >> FunctionalList()");
         FunctionalList fl = faList.rest();
@@ -416,6 +412,91 @@ public class MainTest01 {
         for (int i = 0; i <= fl.size()-1; i++){
             System.out.println("FunctionalArrayList >> List Elements >> " + fl.get(i).getReturnValue());
         }
+
+
+
+
+
+
+
+
+        SampleableListImpl sli = new SampleableListImpl();
+
+        System.out.println("\nSampleableListImpl >> Adding string '000' to list");
+        r = sli.add ("000");
+        System.out.println("SampleableListImpl >> Inspect Return Object >> HasError()     >> " + r.hasError());
+        System.out.println("SampleableListImpl >> Inspect Return Object >> ErrorMessage() >> " + r.getError());
+        System.out.println("SampleableListImpl >> Inspect Return Object >> Object()       >> " + r.getReturnValue());
+
+        System.out.println("\nSampleableListImpl >> Adding string '111' to list");
+        r = sli.add ("111");
+        System.out.println("SampleableListImpl >> Inspect Return Object >> HasError()     >> " + r.hasError());
+        System.out.println("SampleableListImpl >> Inspect Return Object >> ErrorMessage() >> " + r.getError());
+        System.out.println("SampleableListImpl >> Inspect Return Object >> Object()       >> " + r.getReturnValue());
+
+        System.out.println("\nSampleableListImpl >> Adding string '222' to list");
+        r = sli.add ("222");
+        System.out.println("SampleableListImpl >> Inspect Return Object >> HasError()     >> " + r.hasError());
+        System.out.println("SampleableListImpl >> Inspect Return Object >> ErrorMessage() >> " + r.getError());
+        System.out.println("SampleableListImpl >> Inspect Return Object >> Object()       >> " + r.getReturnValue());
+
+        System.out.println("\nSampleableListImpl >> Adding string '333' to list");
+        r = sli.add ("333");
+        System.out.println("SampleableListImpl >> Inspect Return Object >> HasError()     >> " + r.hasError());
+        System.out.println("SampleableListImpl >> Inspect Return Object >> ErrorMessage() >> " + r.getError());
+        System.out.println("SampleableListImpl >> Inspect Return Object >> Object()       >> " + r.getReturnValue());
+
+        System.out.println("\nSampleableListImpl >> Adding string '444' to list");
+        r = sli.add ("444");
+        System.out.println("SampleableListImpl >> Inspect Return Object >> HasError()     >> " + r.hasError());
+        System.out.println("SampleableListImpl >> Inspect Return Object >> ErrorMessage() >> " + r.getError());
+        System.out.println("SampleableListImpl >> Inspect Return Object >> Object()       >> " + r.getReturnValue());
+
+        System.out.println("\nSampleableListImpl >> Adding string '555' to list");
+        r = sli.add ("555");
+        System.out.println("SampleableListImpl >> Inspect Return Object >> HasError()     >> " + r.hasError());
+        System.out.println("SampleableListImpl >> Inspect Return Object >> ErrorMessage() >> " + r.getError());
+        System.out.println("SampleableListImpl >> Inspect Return Object >> Object()       >> " + r.getReturnValue());
+
+        System.out.println("\nSampleableListImpl >> Adding string '666' to list");
+        r = sli.add ("666");
+        System.out.println("SampleableListImpl >> Inspect Return Object >> HasError()     >> " + r.hasError());
+        System.out.println("SampleableListImpl >> Inspect Return Object >> ErrorMessage() >> " + r.getError());
+        System.out.println("SampleableListImpl >> Inspect Return Object >> Object()       >> " + r.getReturnValue());
+
+        System.out.println("\nSampleableListImpl >> Adding string '777' to list");
+        r = sli.add ("777");
+        System.out.println("SampleableListImpl >> Inspect Return Object >> HasError()     >> " + r.hasError());
+        System.out.println("SampleableListImpl >> Inspect Return Object >> ErrorMessage() >> " + r.getError());
+        System.out.println("SampleableListImpl >> Inspect Return Object >> Object()       >> " + r.getReturnValue());
+
+        System.out.println("\nSampleableListImpl >> Adding string '888' to list");
+        r = sli.add ("888");
+        System.out.println("SampleableListImpl >> Inspect Return Object >> HasError()     >> " + r.hasError());
+        System.out.println("SampleableListImpl >> Inspect Return Object >> ErrorMessage() >> " + r.getError());
+        System.out.println("SampleableListImpl >> Inspect Return Object >> Object()       >> " + r.getReturnValue());
+
+        System.out.println("\nSampleableListImpl >> Adding string '999' to list");
+        r = sli.add ("999");
+        System.out.println("SampleableListImpl >> Inspect Return Object >> HasError()     >> " + r.hasError());
+        System.out.println("SampleableListImpl >> Inspect Return Object >> ErrorMessage() >> " + r.getError());
+        System.out.println("SampleableListImpl >> Inspect Return Object >> Object()       >> " + r.getReturnValue());
+
+        System.out.println("\nSampleableListImpl >> Iterate:");
+        for (int i = 0; i <= sli.size()-1; i++){
+            System.out.println("SampleableListImpl >> List Elements >> " + sli.get(i).getReturnValue());
+        }
+
+
+        System.out.println("\nSampleableListImpl >> Sample()");
+        SampleableList sliS = sli.sample();
+
+        System.out.println("\nSampleableListImpl.Sample() >> Iterate:");
+        for (int i = 0; i <= sliS.size()-1; i++){
+            System.out.println("nSampleableListImpl.Sample() >> List Elements >> " + sliS.get(i).getReturnValue());
+        }
+
+
 
 
     }
